@@ -1,58 +1,424 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="الملف الشخصي الرسمي لـِ طارق جمال خلاف محمد، رائد أعمال وباحث علمي.">
-    <meta name="author" content="طارق جمال خلاف محمد">
-    <title>طارق جمال خلاف محمد | رائد أعمال وباحث</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="الموقع الرسمي للمهندس طارق محمد | Official site of Eng. Tarek Mohamed, Software Architect & Enterprise Engineer with 17+ years and 131 projects." />
+    <meta name="author" content="Eng. Tarek Mohamed" />
+    <title>Tarek Mohamed - Software Architect & Enterprise Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Changa:wght@500;700&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --primary-color: #0a4f6e;
-            --secondary-color: #f4f4f4;
-            --text-color: #333;
-            --header-text-color: #ffffff;
+            --ink: #0a1128;
+            --ink-soft: #1f2a44;
+            --sand: #f6f4ef;
+            --gold: #cf9b41;
+            --mint: #44b8a3;
+            --card: #ffffff;
+            --line: rgba(10, 17, 40, 0.12);
+            --hero-gradient: radial-gradient(circle at 10% 10%, #44b8a322, transparent 30%),
+                radial-gradient(circle at 85% 20%, #cf9b4133, transparent 35%),
+                linear-gradient(130deg, #0a1128 0%, #14213d 60%, #1f2a44 100%);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Tajawal', sans-serif;
             margin: 0;
+            font-family: "Cairo", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 8% 5%, #cf9b411f 0%, transparent 27%),
+                radial-gradient(circle at 94% 90%, #44b8a31f 0%, transparent 25%),
+                var(--sand);
+            min-height: 100vh;
+        }
+
+        .shell {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 26px 18px 48px;
+        }
+
+        .hero {
+            background: var(--hero-gradient);
+            color: #ffffff;
+            border-radius: 24px;
+            padding: 36px 24px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 48px rgba(10, 17, 40, 0.35);
+            animation: revealUp 0.8s ease-out both;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -70px -70px auto;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            border: 2px solid #ffffff20;
+            transform: rotate(18deg);
+        }
+
+        .title {
+            font-family: "Changa", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin: 0;
+            line-height: 1.2;
+            letter-spacing: 0.2px;
+        }
+
+        .subtitle {
+            margin: 12px 0 0;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #f5f7ff;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .badge {
+            border: 1px solid #ffffff36;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-size: 0.94rem;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            background-color: #ffffff20;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.45fr 1fr;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .grid-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .card {
+            background-color: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 22px 20px;
+            box-shadow: 0 8px 24px rgba(10, 17, 40, 0.06);
+            animation: revealUp 0.7s ease both;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.08s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.22s;
+        }
+
+        .kicker {
+            display: inline-block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            color: var(--mint);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-family: "Changa", sans-serif;
+            color: var(--ink-soft);
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0;
+            color: #2e3a54;
+            line-height: 1.85;
+            font-size: 1.03rem;
+        }
+
+        .facts {
+            list-style: none;
             padding: 0;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 25px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: var(--header-text-color);
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-        }
-
-        header h1 {
             margin: 0;
-            font-size: 2.5em;
+            display: grid;
+            gap: 8px;
         }
 
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-            opacity: 0.9;
+        .facts li {
+            border: 1px dashed #1f2a4426;
+            border-radius: 12px;
+            padding: 10px 12px;
+            color: #23304d;
+            background: #fbfcff;
         }
 
-        .section {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .chip {
+            padding: 7px 10px;
+            border: 1px solid #1f2a4429;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            background: #fbfcff;
+            color: #243252;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .links a {
+            display: block;
+            text-decoration: none;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 10px 12px;
+            color: var(--ink-soft);
+            font-weight: 700;
+            background: #ffffff;
+            transition: all 0.25s ease;
+        }
+
+        .links a:hover {
+            border-color: var(--mint);
+            background: #44b8a312;
+            transform: translateY(-2px);
+        }
+
+        .contact {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact a {
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 10px 12px;
+            transition: all 0.25s ease;
+        }
+
+        .contact a:hover {
+            border-color: var(--gold);
+            color: #6a4c15;
+            background: #cf9b4117;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #4a5772;
+            font-size: 0.95rem;
+        }
+
+        .source-note {
+            margin-top: 6px;
+            font-size: 0.85rem;
+            color: #667495;
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 28px 20px;
+            }
+
+            .shell {
+                padding-inline: 14px;
+            }
+
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <section class="hero">
+            <h1 class="title">Eng. Tarek Mohamed</h1>
+            <p class="subtitle">مهندس حلول برمجية متكاملة | Software Architect &amp; Enterprise Engineer</p>
+            <div class="hero-actions">
+                <a class="badge" href="https://tarek-mohamed.me.eg/" target="_blank" rel="noopener noreferrer">الموقع الأساسي | Official Website</a>
+                <a class="badge" href="https://tarek-mohamed.me.eg/start-project" target="_blank" rel="noopener noreferrer">ابدأ مشروعك | Start a Project</a>
+                <a class="badge" href="https://tarek-mohamed.me.eg/projects" target="_blank" rel="noopener noreferrer">الأعمال | Portfolio</a>
+            </div>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <span class="kicker">Profile | الهوية المهنية</span>
+                <h2>الهوية المهنية | Professional Identity</h2>
+                <p>
+                    مهندس برمجيات متخصص في بناء الأنظمة المؤسسية واسعة النطاق، مع خبرة تتجاوز 17 عامًا في هندسة البرمجيات،
+                    البنية السحابية، تطبيقات الموبايل، ودمج الذكاء الاصطناعي في حلول الأعمال.
+                    Specialist in enterprise-scale systems, cloud infrastructure, mobile platforms, and AI-powered business solutions.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="kicker">Highlights | ملخص</span>
+                <h2>بيانات أساسية | Key Facts</h2>
+                <ul class="facts">
+                    <li>الاسم | Name: Eng. Tarek Mohamed</li>
+                    <li>الخبرة | Experience: +17 years</li>
+                    <li>المشاريع | Production Projects: 131</li>
+                    <li>النطاق الجغرافي | Coverage: EG, SA, AE, US, GB</li>
+                    <li>الجهة | Organization: EgyCode</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <span class="kicker">Expertise | التخصصات</span>
+                <h2>مجالات التخصص | Expertise Areas</h2>
+                <div class="chips">
+                    <span class="chip">Software Architecture</span>
+                    <span class="chip">Cloud Infrastructure</span>
+                    <span class="chip">Enterprise Engineering</span>
+                    <span class="chip">DevOps</span>
+                    <span class="chip">AI Integration</span>
+                    <span class="chip">Cybersecurity</span>
+                    <span class="chip">AWS</span>
+                    <span class="chip">GCP</span>
+                    <span class="chip">Next.js</span>
+                    <span class="chip">Laravel</span>
+                    <span class="chip">React Native</span>
+                    <span class="chip">Flutter</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="kicker">Services | الخدمات</span>
+                <h2>الخدمات الأساسية | Core Services</h2>
+                <ul class="facts">
+                    <li>Web Development</li>
+                    <li>AI Solutions</li>
+                    <li>Cybersecurity</li>
+                    <li>Consultation</li>
+                    <li>Startup Launch Packages</li>
+                    <li>Enterprise-Grade Systems</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="grid-full">
+            <article class="card">
+                <span class="kicker">Portfolio | المشاريع</span>
+                <h2>مشاريع بارزة من المصدر | Featured Projects</h2>
+                <p>
+                    تم سحب البيانات مباشرة من الموقع الأساسي وتشمل أكثر من 130 مشروعًا، من أبرزها:
+                    Data was synced directly from the main website and includes 130+ projects.
+                </p>
+                <div class="chips">
+                    <span class="chip">EgyCode</span>
+                    <span class="chip">FastCare SA</span>
+                    <span class="chip">Kay.Rocks</span>
+                    <span class="chip">Supermarket Al-Tawfeer</span>
+                    <span class="chip">HealthyLife</span>
+                    <span class="chip">Kayan</span>
+                    <span class="chip">Quran Ramadan</span>
+                    <span class="chip">Smart Logistics</span>
+                    <span class="chip">Orbit EDU</span>
+                    <span class="chip">Apex Core</span>
+                    <span class="chip">Nova SaaS</span>
+                    <span class="chip">Nafid Hub</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="kicker">Main Links | الروابط الأساسية</span>
+                <h2>روابط الأقسام من الموقع الأصلي | Main Site Sections</h2>
+                <div class="links">
+                    <a href="https://tarek-mohamed.me.eg/about" target="_blank" rel="noopener noreferrer">عن المهندس | About</a>
+                    <a href="https://tarek-mohamed.me.eg/services" target="_blank" rel="noopener noreferrer">الخدمات | Services</a>
+                    <a href="https://tarek-mohamed.me.eg/projects" target="_blank" rel="noopener noreferrer">المشاريع | Projects</a>
+                    <a href="https://tarek-mohamed.me.eg/blog" target="_blank" rel="noopener noreferrer">المقالات | Blog</a>
+                    <a href="https://tarek-mohamed.me.eg/certifications" target="_blank" rel="noopener noreferrer">الشهادات | Certifications</a>
+                    <a href="https://tarek-mohamed.me.eg/tools" target="_blank" rel="noopener noreferrer">الأدوات | Tools</a>
+                    <a href="https://tarek-mohamed.me.eg/start-project" target="_blank" rel="noopener noreferrer">ابدأ مشروع | Start Project</a>
+                    <a href="https://tarek-mohamed.me.eg/.well-known/agent-skills/index.json" target="_blank" rel="noopener noreferrer">ملف المهارات | Agent Skills JSON</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="kicker">Social | التواصل</span>
+                <h2>حسابات التواصل | Social Profiles</h2>
+                <div class="links">
+                    <a href="https://linkedin.com/in/seotarek" target="_blank" rel="noopener noreferrer">لينكدإن | LinkedIn</a>
+                    <a href="https://github.com/seotarek" target="_blank" rel="noopener noreferrer">جيت هب | GitHub</a>
+                    <a href="https://facebook.com/seotarek" target="_blank" rel="noopener noreferrer">فيسبوك | Facebook</a>
+                    <a href="https://egycode.tech" target="_blank" rel="noopener noreferrer">EgyCode</a>
+                </div>
+                <p class="source-note">Source synced from tarek-mohamed.me.eg | تم تحديث البيانات من الموقع الأساسي</p>
+            </article>
+        </section>
+
+        <section class="grid-full">
+            <article class="card">
+                <span class="kicker">Value Proposition | الرسالة</span>
+                <h2>رسالة الموقع | Value Proposition</h2>
+                <p>
+                    17+ years building enterprise systems, cloud infrastructure, and mobile applications. Full-stack architect
+                    specializing in scalable SaaS solutions for corporations in MENA, Europe, and Gulf markets.
+                </p>
+            </article>
+        </section>
+
+        <footer>
+            © Tarek Mohamed - Software Architect & Enterprise Engineer | المهندس طارق محمد
+        </footer>
+    </main>
+</body>
+</html>
