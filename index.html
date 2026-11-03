@@ -64,8 +64,75 @@
                     "https://huggingface.co/spaces/seotarek/LightGuard-Agent",
                     "https://discord.com/users/568723296326254613"
                 ],
+                "worksFor": [
+                    {
+                        "@type": "Organization",
+                        "name": "EgyCode Platform",
+                        "url": "https://egycode.tech"
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "Eternal Pharma"
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "Kayan Ambassadors of Egypt (ISO 21001)"
+                    }
+                ],
+                "hasOccupation": [
+                    {
+                        "@type": "Occupation",
+                        "name": "Chairman & Principal Systems Architect",
+                        "description": "Enterprise digital identity verification, anti-counterfeiting platforms, and sovereign AI architectures at EgyCode Platform."
+                    },
+                    {
+                        "@type": "Occupation",
+                        "name": "IT Consultant & Systems Strategist",
+                        "description": "Enterprise pharmaceutical IT strategy, regulatory compliance, and distributed cloud infrastructure at Eternal Pharma."
+                    },
+                    {
+                        "@type": "Occupation",
+                        "name": "Chairman & Training Institute Director",
+                        "description": "Directing ISO 21001 certified technology education, institutional programs, and student accreditation at Kayan Ambassadors of Egypt."
+                    }
+                ],
+                "hasCredential": [
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "eJPT - eLearnSecurity Junior Penetration Tester"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "CCNP Security - Cisco Certified Network Professional"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "CompTIA Security+"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "Intel Edge AI Certification"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "Google Gemini Educator"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "Deep Learning Specialization (DeepLearning.AI)"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "AWS Cloud Practitioner"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "Google Cloud Associate"
+                    }
+                ],
                 "knowsAbout": [
                     "Software Architecture",
+                    "Enterprise Systems Engineering",
                     "AI Agent Security",
                     "Indirect Prompt Injection (IPI) Defense",
                     "Model Context Protocol (MCP)",
@@ -74,7 +141,9 @@
                     "Clinical Decision Support (IEC 62304)",
                     "Distributed Cloud Backends in Go",
                     "PostgreSQL pgvector & HNSW",
-                    "Compiler-Grade Design Systems (W3C DTCG)"
+                    "Compiler-Grade Design Systems (W3C DTCG)",
+                    "Offensive Cybersecurity & Penetration Testing",
+                    "ISO 21001 Institutional Management"
                 ]
             },
             {
@@ -1183,6 +1252,331 @@
         }
 
         /* ==========================================================================
+           Executive Leadership & Enterprise Advisory Grid
+           ========================================================================== */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 72px;
+        }
+
+        .leadership-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--trans-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .leadership-card:hover {
+            border-color: var(--border-focus);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .leadership-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .leadership-period {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--accent-emerald-dark);
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            padding: 3px 8px;
+            border-radius: var(--radius-pill);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .leadership-org {
+            font-size: 1.28rem;
+            font-weight: 900;
+            color: var(--text-title);
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+
+        .leadership-role {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--accent-blue-dark);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 14px;
+        }
+
+        .leadership-desc {
+            font-size: 0.88rem;
+            color: var(--text-body);
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+        .leadership-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .leadership-list li {
+            font-size: 0.82rem;
+            color: var(--text-body);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+
+        .leadership-list li svg {
+            flex-shrink: 0;
+            margin-top: 3px;
+            color: var(--accent-emerald-dark);
+        }
+
+        /* ==========================================================================
+           17-Year Engineering Trajectory (Timeline / Evolution Grid)
+           ========================================================================== */
+        .evolution-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 72px;
+            position: relative;
+        }
+
+        .evolution-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 22px 26px;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 24px;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--trans-smooth);
+        }
+
+        .evolution-card:hover {
+            border-color: var(--border-focus);
+            box-shadow: var(--shadow-md);
+            transform: translateX(3px);
+        }
+
+        .evolution-phase-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid var(--border-subtle);
+            padding-right: 20px;
+        }
+
+        .evolution-phase-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-title);
+            line-height: 1;
+        }
+
+        .evolution-phase-lbl {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        .evolution-body {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .evolution-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .evolution-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-title);
+            letter-spacing: -0.01em;
+        }
+
+        .evolution-period {
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--accent-blue-dark);
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 2px 8px;
+            border-radius: var(--radius-pill);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .evolution-desc {
+            font-size: 0.86rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        .evolution-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .evolution-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: var(--bg-muted);
+            color: var(--text-body);
+            border: 1px solid var(--border-subtle);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ==========================================================================
+           75+ Verified Credentials & Certifications Bento
+           ========================================================================== */
+        .credentials-bento {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 72px;
+        }
+
+        .credential-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--trans-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .credential-card:hover {
+            border-color: var(--border-focus);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .credential-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .credential-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .credential-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-muted);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-blue-dark);
+            flex-shrink: 0;
+        }
+
+        .credential-icon-box.emerald { color: var(--accent-emerald-dark); }
+        .credential-icon-box.indigo { color: var(--accent-indigo-dark); }
+        .credential-icon-box.amber { color: var(--accent-amber); }
+
+        .credential-cat-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-title);
+            line-height: 1.25;
+        }
+
+        .credential-cat-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .credential-badge {
+            font-size: 0.74rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 3px 8px;
+            border-radius: var(--radius-pill);
+            background: var(--bg-muted);
+            color: var(--text-title);
+            border: 1px solid var(--border-subtle);
+            white-space: nowrap;
+        }
+
+        .credential-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .credential-item {
+            font-size: 0.84rem;
+            color: var(--text-body);
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            line-height: 1.45;
+        }
+
+        .credential-check {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-emerald-dark);
+            flex-shrink: 0;
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+        .credential-check svg {
+            width: 10px;
+            height: 10px;
+        }
+
+        /* ==========================================================================
            Footer
            ========================================================================== */
         footer.site-footer {
@@ -1258,6 +1652,29 @@
                 display: none;
             }
 
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credentials-bento {
+                grid-template-columns: 1fr;
+            }
+
+            .evolution-card {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .evolution-phase-col {
+                border-right: none;
+                border-bottom: 1px solid var(--border-subtle);
+                padding-right: 0;
+                padding-bottom: 12px;
+                flex-direction: row;
+                gap: 12px;
+                justify-content: flex-start;
+            }
+
             .bento-card.flagship,
             .bento-card.featured,
             .bento-card.col-4 {
@@ -1318,10 +1735,11 @@
 
             <nav aria-label="Primary Navigation">
                 <ul class="nav-links">
-                    <li><a href="#research" class="nav-link">Security Research</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
                     <li><a href="#ecosystems" class="nav-link">Ecosystems</a></li>
-                    <li><a href="#systems-rust" class="nav-link">Rust Engines</a></li>
-                    <li><a href="#quick-install" class="nav-link">Quick Install</a></li>
+                    <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                    <li><a href="#career-evolution" class="nav-link">Career</a></li>
+                    <li><a href="#credentials" class="nav-link">Credentials</a></li>
                     <li><a href="#manifesto" class="nav-link">Principles</a></li>
                 </ul>
             </nav>
@@ -1789,7 +2207,508 @@
         </section>
 
         <!-- ==========================================================================
-             Section 3: Core Engineering Principles (Manifesto)
+             Executive Appointments & Corporate Leadership
+             ========================================================================== -->
+        <section id="leadership">
+            <div class="section-header">
+                <span class="section-tag">EXECUTIVE LEADERSHIP &amp; STRATEGY</span>
+                <h2 class="section-title">Corporate Appointments &amp; Architectural Advisory</h2>
+                <p class="section-subtitle">Guiding technological sovereignty, enterprise digital transformation, and mission-critical software systems across industry leaders.</p>
+            </div>
+
+            <div class="leadership-grid">
+                <!-- Card 1: EgyCode Platform -->
+                <article class="leadership-card">
+                    <div>
+                        <div class="leadership-top">
+                            <span class="leadership-period">2024 — PRESENT</span>
+                            <span class="card-badge">ENTERPRISE PLATFORM</span>
+                        </div>
+                        <h3 class="leadership-org">EgyCode Platform</h3>
+                        <div class="leadership-role">Chairman &amp; Principal Systems Architect</div>
+                        <p class="leadership-desc">
+                            Directing corporate strategy and systems engineering for EgyCode's anti-counterfeiting and digital identity platform. Architecting enterprise multi-tenant cloud backends, tamper-proof verification APIs, and sovereign infrastructure.
+                        </p>
+                        <ul class="leadership-list">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Multi-tenant SaaS architecture with end-to-end cryptographic verification.</span>
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Automated zero-downtime CI/CD on AWS with hardened PostgreSQL clusters.</span>
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Corporate developer governance, design gates, and security compliance.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-chips">
+                            <span class="tech-chip">AWS Cloud</span>
+                            <span class="tech-chip">Laravel 11</span>
+                            <span class="tech-chip">PostgreSQL</span>
+                            <span class="tech-chip">Anti-Counterfeiting</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://egycode.tech" target="_blank" rel="noopener noreferrer" class="card-link">
+                                <span>Visit egycode.tech</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Eternal Pharma -->
+                <article class="leadership-card">
+                    <div>
+                        <div class="leadership-top">
+                            <span class="leadership-period">2024 — PRESENT</span>
+                            <span class="card-badge">PHARMACEUTICAL IT</span>
+                        </div>
+                        <h3 class="leadership-org">Eternal Pharma</h3>
+                        <div class="leadership-role">IT Consultant &amp; Systems Strategist</div>
+                        <p class="leadership-desc">
+                            Advising executive leadership on pharmaceutical infrastructure modernization, enterprise ERP integration, compliance data integrity, and secure multi-branch operational telemetry.
+                        </p>
+                        <ul class="leadership-list">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Regulatory data governance compliant with GAMP and healthcare security standards.</span>
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Enterprise systems consolidation and automated inventory synchronization.</span>
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Hardened networking, offsite disaster recovery, and failover topologies.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-chips">
+                            <span class="tech-chip">ERP Systems</span>
+                            <span class="tech-chip">GAMP Compliance</span>
+                            <span class="tech-chip">Cloud Telemetry</span>
+                            <span class="tech-chip">Data Integrity</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://tarek-mohamed.me.eg/about" target="_blank" rel="noopener noreferrer" class="card-link">
+                                <span>Consultancy Profile</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Kayan Ambassadors of Egypt -->
+                <article class="leadership-card">
+                    <div>
+                        <div class="leadership-top">
+                            <span class="leadership-period">2023 — PRESENT</span>
+                            <span class="card-badge">ISO 21001 ACCREDITED</span>
+                        </div>
+                        <h3 class="leadership-org">Kayan Ambassadors of Egypt</h3>
+                        <div class="leadership-role">Chairman &amp; Training Institute Director</div>
+                        <p class="leadership-desc">
+                            Directing vocational technology training and institutional education certified under ISO 21001 international standard. Architected the digital portal for accredited student registry and online evaluation.
+                        </p>
+                        <ul class="leadership-list">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>ISO 21001 compliant Educational Organizations Management Systems (EOMS).</span>
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Digital examination portal with verifiable cryptographic certificate issuance.</span>
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Institutional technology curriculum development and workforce training.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-chips">
+                            <span class="tech-chip">ISO 21001</span>
+                            <span class="tech-chip">Educational Systems</span>
+                            <span class="tech-chip">Certificate Auth</span>
+                            <span class="tech-chip">Governance</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://tarek-mohamed.me.eg/projects" target="_blank" rel="noopener noreferrer" class="card-link">
+                                <span>Portal Case Study</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             17-Year Engineering Trajectory (Timeline / Evolution Grid)
+             ========================================================================== -->
+        <section id="career-evolution">
+            <div class="section-header">
+                <span class="section-tag">ENGINEERING TRAJECTORY (2009 — PRESENT)</span>
+                <h2 class="section-title">17-Year Engineering Evolution: From Circuits to Autonomous AI</h2>
+                <p class="section-subtitle">A disciplined progression spanning component-level electronics, high-concurrency desktop engines, international graphic arts, cloud infrastructure, offensive cybersecurity, and sovereign AI security.</p>
+            </div>
+
+            <div class="evolution-grid">
+                <!-- Phase 01 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">01</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Hardware &amp; Component-Level Electronics</h3>
+                            <span class="evolution-period">2009 — 2011</span>
+                        </div>
+                        <p class="evolution-desc">
+                            Component-level micro-soldering, motherboard diagnostics, BIOS firmware recovery, and hardware-layer forensics. Grounded a fundamental physical mental model of CPU architecture, bus timings, interrupt cycles, and low-level hardware constraints.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">Motherboard Diagnostics</span>
+                            <span class="evolution-tag">Component Rework</span>
+                            <span class="evolution-tag">BIOS Recovery</span>
+                            <span class="evolution-tag">Hardware Forensics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 02 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">02</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Desktop Systems &amp; High-Concurrency Game Engines</h3>
+                            <span class="evolution-period">2011 — 2013</span>
+                        </div>
+                        <p class="evolution-desc">
+                            C# and .NET desktop application development, raw Win32 socket programming, and reverse engineering high-throughput online game server emulators. Authored and published desktop utilities and binary patching tools across Arabic developer communities.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">C# / .NET Framework</span>
+                            <span class="evolution-tag">Win32 API</span>
+                            <span class="evolution-tag">Multi-Threaded Sockets</span>
+                            <span class="evolution-tag">Binary Disassembly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 03 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">03</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Creative Typography, Visual Systems &amp; Industrial Print Production</h3>
+                            <span class="evolution-period">2013 — 2015</span>
+                        </div>
+                        <p class="evolution-desc">
+                            Professional graphic design and pre-press production management at premier commercial print houses in the Kingdom of Saudi Arabia. Large-format color separation, CMYK calibration, vector packaging engineering, and corporate identity systems at mass commercial scale.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">Pre-Press Architecture</span>
+                            <span class="evolution-tag">Typography &amp; Vectors</span>
+                            <span class="evolution-tag">CMYK Color Science</span>
+                            <span class="evolution-tag">Brand Identity Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 04 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">04</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Full-Stack Web Architectures &amp; Cross-Platform Mobile</h3>
+                            <span class="evolution-period">2015 — 2021</span>
+                        </div>
+                        <p class="evolution-desc">
+                            End-to-end web and mobile system architecture. Production iOS and Android applications utilizing Flutter, React Native, and native Kotlin. Engineered corporate SPA/PWA portals, high-throughput Laravel backends, and comprehensive Meta Developer platform integrations.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">Flutter &amp; Dart</span>
+                            <span class="evolution-tag">React Native &amp; Kotlin</span>
+                            <span class="evolution-tag">Laravel &amp; REST APIs</span>
+                            <span class="evolution-tag">Meta Platform APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 05 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">05</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Cloud Infrastructure, Container Swarms &amp; Zero-Downtime DevOps</h3>
+                            <span class="evolution-period">2021 — 2024</span>
+                        </div>
+                        <p class="evolution-desc">
+                            Multi-region AWS and Google Cloud infrastructure design. Production container orchestration with Docker and Kubernetes, automated CI/CD pipelines, high-availability database replication, and zero-downtime rolling update topologies for enterprise clients.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">AWS &amp; GCP Architecture</span>
+                            <span class="evolution-tag">Docker &amp; Kubernetes</span>
+                            <span class="evolution-tag">GitHub Actions CI/CD</span>
+                            <span class="evolution-tag">Zero-Downtime Deploy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 06 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">06</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Threat Modeling, Penetration Testing &amp; Infrastructure Hardening</h3>
+                            <span class="evolution-period">2023 — Present</span>
+                        </div>
+                        <p class="evolution-desc">
+                            Offensive penetration testing (eJPT, CCNP Security, CompTIA Security+), OWASP ASVS verification, and kernel-level Linux defense. Hardening public APIs against distributed denial of service (DDoS), credential stuffing, and unauthorized privilege escalation.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">eJPT Penetration Testing</span>
+                            <span class="evolution-tag">OWASP ASVS Standard</span>
+                            <span class="evolution-tag">DDoS Mitigation &amp; WAF</span>
+                            <span class="evolution-tag">Linux Kernel Hardening</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 07 -->
+                <div class="evolution-card">
+                    <div class="evolution-phase-col">
+                        <span class="evolution-phase-num">07</span>
+                        <span class="evolution-phase-lbl">PHASE</span>
+                    </div>
+                    <div class="evolution-body">
+                        <div class="evolution-meta">
+                            <h3 class="evolution-title">Autonomous AI Agent Security, Extreme Rust Systems &amp; Corporate Leadership</h3>
+                            <span class="evolution-period">2024 — Present</span>
+                        </div>
+                        <p class="evolution-desc">
+                            Pioneering sub-millisecond AI security with LightGuard-Agent (Zenodo DOI: 10.5281/zenodo.22731104, PyPI). Engineering memory-safe graphics and native desktop engines in Rust (PhotoCraft, Valorex). Leading EgyCode Platform and institutional education programs under ISO 21001.
+                        </p>
+                        <div class="evolution-tags">
+                            <span class="evolution-tag">AI Agent Security (MCP)</span>
+                            <span class="evolution-tag">Zenodo DOI Research</span>
+                            <span class="evolution-tag">Rust Graphics &amp; SIMD</span>
+                            <span class="evolution-tag">Executive Governance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             75+ Verified Global Credentials & Professional Certifications
+             ========================================================================== -->
+        <section id="credentials">
+            <div class="section-header">
+                <span class="section-tag">FORMAL ACCREDITATION &amp; VERIFICATION</span>
+                <h2 class="section-title">75+ Verified Global Credentials &amp; Certifications</h2>
+                <p class="section-subtitle">Rigorous professional certifications issued by premier international institutions across cybersecurity, artificial intelligence, cloud architecture, and organizational governance.</p>
+            </div>
+
+            <div class="credentials-bento">
+                <!-- Card 1: Cybersecurity -->
+                <div class="credential-card">
+                    <div>
+                        <div class="credential-head">
+                            <div class="credential-title-wrap">
+                                <div class="credential-icon-box indigo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="credential-cat-title">Cybersecurity &amp; Defensive Engineering</h3>
+                                    <span class="credential-cat-sub">Offensive Security &bull; Network Hardening</span>
+                                </div>
+                            </div>
+                            <span class="credential-badge">20+ CREDENTIALS</span>
+                        </div>
+                        <ul class="credential-list">
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>eJPT</strong>&nbsp;— eLearnSecurity Junior Penetration Tester (Practical Offensive Testing)
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>CCNP Security</strong>&nbsp;— Cisco Certified Network Professional Security
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>CompTIA Security+</strong>&nbsp;— Global Standard for Infrastructure Security &amp; Cryptography
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Ethical Hacking Professional</strong>&nbsp;— Enterprise Threat Analysis &amp; Vulnerability Assessment
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>OWASP Web Security</strong>&nbsp;— Application Security Verification Standard (ASVS)
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Network Defense &amp; DDoS Mitigation</strong>&nbsp;— Border Gateway Protocol &amp; Rate-Limiting Architecture
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: AI & Data Science -->
+                <div class="credential-card">
+                    <div>
+                        <div class="credential-head">
+                            <div class="credential-title-wrap">
+                                <div class="credential-icon-box emerald">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                                </div>
+                                <div>
+                                    <h3 class="credential-cat-title">AI, Deep Learning &amp; Computer Vision</h3>
+                                    <span class="credential-cat-sub">Edge AI &bull; Agent Security &bull; LLM Runtimes</span>
+                                </div>
+                            </div>
+                            <span class="credential-badge">30+ CREDENTIALS</span>
+                        </div>
+                        <ul class="credential-list">
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Intel Edge AI Certification</strong>&nbsp;— Edge Deep Learning Inference &amp; OpenVINO Runtime Acceleration
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Google Gemini Educator</strong>&nbsp;— Generative AI System Architecture &amp; Prompt Security Design
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Deep Learning Specialization</strong>&nbsp;— Neural Networks, CNNs, Sequence Models (DeepLearning.AI)
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Machine Learning Engineer</strong>&nbsp;— Production ML Pipelines, Feature Stores &amp; Model Serving
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Computer Vision &amp; NLP</strong>&nbsp;— Real-time Semantic Segmentation, Embeddings &amp; Transformers
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Applied AI Agent Engineering</strong>&nbsp;— Tool-Calling Runtimes, FastMCP &amp; Deterministic Guards
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cloud & Distributed Systems -->
+                <div class="credential-card">
+                    <div>
+                        <div class="credential-head">
+                            <div class="credential-title-wrap">
+                                <div class="credential-icon-box">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="credential-cat-title">Cloud Infrastructure &amp; Full-Stack Systems</h3>
+                                    <span class="credential-cat-sub">AWS &bull; Google Cloud &bull; Kubernetes</span>
+                                </div>
+                            </div>
+                            <span class="credential-badge">15+ CREDENTIALS</span>
+                        </div>
+                        <ul class="credential-list">
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>AWS Cloud Practitioner</strong>&nbsp;— Amazon Web Services Architecture, IAM &amp; VPC Security
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Google Cloud Associate</strong>&nbsp;— Distributed Cloud Storage, Compute Engine &amp; Cloud Run
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>egFWD Professional Development</strong>&nbsp;— Ministry of Communications &amp; Information Technology
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Full Stack Web Developer</strong>&nbsp;— Enterprise Microservices, REST Gateways &amp; Event Buses
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Coursera Full Stack Specialization</strong>&nbsp;— Distributed Systems Engineering &amp; High-Concurrency Web
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Docker &amp; Container Security</strong>&nbsp;— OCI Compliant Minimal Containerization &amp; Distroless Images
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Governance & Leadership -->
+                <div class="credential-card">
+                    <div>
+                        <div class="credential-head">
+                            <div class="credential-title-wrap">
+                                <div class="credential-icon-box amber">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="credential-cat-title">Institutional Governance &amp; Leadership</h3>
+                                    <span class="credential-cat-sub">ISO Standards &bull; Corporate Direction</span>
+                                </div>
+                            </div>
+                            <span class="credential-badge">EXECUTIVE STANDARDS</span>
+                        </div>
+                        <ul class="credential-list">
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>ISO 21001 Certified Training Director</strong>&nbsp;— Quality Management for Educational Organizations
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Enterprise Digital Transformation Architect</strong>&nbsp;— Identity Verification &amp; Anti-Counterfeiting (EgyCode)
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Pharmaceutical IT Governance Advisor</strong>&nbsp;— GAMP &amp; Compliance Data Systems (Eternal Pharma)
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Google Community Contributor</strong>&nbsp;— Volunteer Developer Mentorship &amp; AI Education
+                            </li>
+                            <li class="credential-item">
+                                <span class="credential-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <strong>Software Quality &amp; Verification Protocol</strong>&nbsp;— Continuous Integration &amp; Automated Regression Gates
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Section 4: Core Engineering Principles (Manifesto)
              ========================================================================== -->
         <section id="manifesto">
             <div class="section-header">
@@ -1983,13 +2902,14 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Ecosystems &amp; Research</h4>
+                    <h4>Navigation &amp; Research</h4>
                     <ul class="footer-links">
+                        <li><a href="#leadership">Executive Leadership</a></li>
+                        <li><a href="#career-evolution">17-Year Evolution</a></li>
+                        <li><a href="#credentials">75+ Credentials</a></li>
                         <li><a href="https://doi.org/10.5281/zenodo.22731104" target="_blank" rel="noopener noreferrer">Research DOI</a></li>
                         <li><a href="https://seotarek.github.io/omnicode-studio/" target="_blank" rel="noopener noreferrer">OmniCode Studio</a></li>
                         <li><a href="https://seotarek.github.io/MedOrqis/" target="_blank" rel="noopener noreferrer">MedOrqis AI CDS</a></li>
-                        <li><a href="https://seotarek.github.io/LightGuard-Agent/" target="_blank" rel="noopener noreferrer">LightGuard Docs</a></li>
-                        <li><a href="https://github.com/storytold/photocraft" target="_blank" rel="noopener noreferrer">PhotoCraft (Rust)</a></li>
                     </ul>
                 </div>
 
