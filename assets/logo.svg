@@ -1,0 +1,36 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm-bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="tm-t" x1="14" y1="15" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="tm-m" x1="14" y1="24" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="tm-glow" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Badge -->
+  <rect width="48" height="48" rx="12" fill="url(#tm-bg)"/>
+  <rect x="0.75" y="0.75" width="46.5" height="46.5" rx="11.25" stroke="#334155" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Architectural Hexagonal Grid Geometry -->
+  <path d="M24 6L40 15V33L24 42L8 33V15L24 6Z" stroke="#1e293b" stroke-width="1.5" stroke-linejoin="round"/>
+  
+  <!-- Architectural 'T' Beam -->
+  <path d="M13 14H35V19H26.5V36H21.5V19H13V14Z" fill="url(#tm-t)"/>
+  
+  <!-- Interlocking Precision 'M' Chevron -->
+  <path d="M13 36L24 22.5L35 36H29.5L24 29L18.5 36H13Z" fill="url(#tm-m)" fill-opacity="0.95"/>
+  
+  <!-- Focal Node -->
+  <circle cx="24" cy="19" r="2.5" fill="#ffffff" filter="url(#tm-glow)"/>
+</svg>
